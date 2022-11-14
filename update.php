@@ -166,9 +166,10 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
                     </div>
                     <div class="form-group">
                         <label>Body</label>
-                        <input type="text" name="body"
-                               class="form-control <?php echo (!empty($body_err)) ? 'is-invalid' : ''; ?>"
-                               value="<?php echo $blogPost->getBody(); ?>">
+                        <textarea type="text" name="body"
+                                  class="form-control <?php echo (!empty($body_err)) ? 'is-invalid' : ''; ?>"
+                        ><?php echo $blogPost->getBody(); ?></textarea>
+
                         <span class="invalid-feedback"><?php echo $body_err; ?></span>
                     </div>
                     <input type="hidden" name="id" value="<?php echo $id; ?>"/>
