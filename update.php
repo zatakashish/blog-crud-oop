@@ -160,8 +160,10 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
                     </div>
                     <div class="form-group">
                         <label>Title</label>
-                        <textarea name="title"
-                                  class="form-control <?php echo (!empty($title_err)) ? 'is-invalid' : ''; ?>"><?php echo $blogPost->getTitle(); ?></textarea>
+                        <input type="text" name="title"
+                               class="form-control <?php echo (!empty($title_err)) ? 'is-invalid' : ''; ?>"
+                               value="<?php echo $blogPost->getTitle(); ?>"
+                        ></input>
                         <span class="invalid-feedback"><?php echo $title_err; ?></span>
                     </div>
                     <div class="form-group">
