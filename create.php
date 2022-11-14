@@ -104,15 +104,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                     <div class="form-group">
                         <label>Title</label>
-                        <textarea type="text" name="title"
-                                  class="form-control <?php echo (!empty($title_err)) ? 'is-invalid' : ''; ?>"><?php echo $title; ?></textarea>
+                        <input type="text" name="title"
+                                  class="form-control <?php echo (!empty($title_err)) ? 'is-invalid' : ''; ?>"><?php echo $title; ?></input>
                         <span class="invalid-feedback"><?php echo $title_err; ?></span>
                     </div>
                     <div class="form-group">
                         <label>Body</label>
-                        <input type="text" name="body"
+                        <textarea type="text" name="body"
                                class="form-control <?php echo (!empty($body_err)) ? 'is-invalid' : ''; ?>"
-                               value="<?php echo $body; ?>">
+                                  value="<?php echo $body; ?>"></textarea>
                         <span class="invalid-feedback"><?php echo $body_err; ?></span>
                     </div>
                     <input type="submit" class="btn btn-primary" value="Submit">
